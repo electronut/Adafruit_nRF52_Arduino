@@ -174,5 +174,7 @@ tools.blackmagicprobe.program.pattern.windows="{path}{cmd}" -quiet -n -cd "{buil
 
 tools.blackmagicprobe.bootloader.params.verbose=
 tools.blackmagicprobe.bootloader.params.quiet=-q --batch-silent
-tools.blackmagicprobe.bootloader.pattern="{path}{cmd}" -quiet -n -cd "{runtime.platform.path}/cores/nRF5/SDK/components/softdevice/{softdevice}/hex/" -ex "target extended-remote {serial.port}" -ex "monitor swdp_scan" -ex "attach 1" -ex "monitor erase mass" -ex "load {softdevice}_{upload.target}_{softdeviceversion}_softdevice.hex" -ex "echo \nSoftdevice upload complete!\n" -ex "detach" -ex "quit"
-tools.blackmagicprobe.bootloader.pattern.windows="{path}{cmd}" -quiet -n -cd "{runtime.platform.path}/cores/nRF5/SDK/components/softdevice/{softdevice}/hex/" -ex "target extended-remote \\.\{serial.port}" -ex "monitor swdp_scan" -ex "attach 1" -ex "monitor erase mass" -ex "load {softdevice}_{upload.target}_{softdeviceversion}_softdevice.hex" -ex "echo \nSoftdevice upload complete!\n" -ex "detach" -ex "quit"
+tools.blackmagicprobe.bootloader.pattern="{path}{cmd}" -quiet -n -cd "{runtime.platform.path}/bootloader/{build.variant}/" -ex "target extended-remote {serial.port}" -ex "monitor swdp_scan" -ex "attach 1" -ex "monitor erase mass" -ex "load {build.sd_name}_nrf52_{softdeviceversion}_softdevice.hex" -ex "echo \nSoftdevice upload complete!\n" -ex "detach" -ex "quit"
+tools.blackmagicprobe.bootloader.pattern.windows="{path}{cmd}" -quiet -n -cd "{runtime.platform.path}/bootloader/{build.variant}/" -ex "target extended-remote \\.\{serial.port}" -ex "monitor swdp_scan" -ex "attach 1" -ex "monitor erase mass" -ex "load {build.sd_name}_nrf52_{softdeviceversion}_softdevice.hex" -ex "echo \nSoftdevice upload complete!\n" -ex "detach" -ex "quit"
+
+tools.blackmagicprobe.bootloader.file={runtime.platform.path}/bootloader/{build.variant}/{build.variant.softdeviceversion}

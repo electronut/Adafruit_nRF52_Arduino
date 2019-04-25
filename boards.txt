@@ -205,3 +205,44 @@ pca10056.menu.debug.l2=Level 2 (Full Debug)
 pca10056.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2 -Os
 pca10056.menu.debug.l3=Level 3 (Segger SystemView)
 pca10056.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3 -Os
+
+#**********************************************
+# Electronut Labs Blip
+#**********************************************
+blip.name=Electronut Labs Blip
+blip.bootloader.tool=blackmagicprobe
+
+# Upload
+blip.upload.tool=blackmagicprobe
+
+# Build
+blip.build.mcu=cortex-m4
+blip.build.f_cpu=64000000
+blip.build.board=ELECTRONUTLABS_BLIP
+blip.build.core=nRF5
+blip.build.variant=blip
+blip.build.extra_flags=-DNRF52840_XXAA
+
+# SofDevice Menu
+# Ram & ROM size varies depending on SoftDevice (check linker script)
+
+blip.menu.softdevice.s140v6=0.2.9 (s140 6.1.1)
+blip.menu.softdevice.s140v6.softdevice=s140v6
+blip.menu.softdevice.s140v6.softdeviceversion=6.1.1
+blip.menu.softdevice.s140v6.build.sd_flags=-DS140
+blip.menu.softdevice.s140v6.build.sd_name=s140
+blip.menu.softdevice.s140v6.build.sd_version=6.1.1
+blip.menu.softdevice.s140v6.build.sd_fwid=0x00B6
+blip.menu.softdevice.s140v6.build.ldscript=nrf52840_s140_v6_nobl.ld
+blip.menu.softdevice.s140v6.upload.maximum_size=892928
+blip.menu.softdevice.s140v6.upload.maximum_data_size=248832
+
+# Debug Menu
+blip.menu.debug.l0=Level 0 (Release)
+blip.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0 -Os
+blip.menu.debug.l1=Level 1 (Error Message)
+blip.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1 -Os
+blip.menu.debug.l2=Level 2 (Full Debug)
+blip.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2 -Os
+blip.menu.debug.l3=Level 3 (Segger SystemView)
+blip.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3 -Os
