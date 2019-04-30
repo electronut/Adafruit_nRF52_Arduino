@@ -33,3 +33,11 @@ nrfutil_boot.program.burn_pattern={program.cmd} --verbose dfu serial -pkg "{boot
 nrfutil_boot.program.params.quiet=
 nrfutil_boot.program.params.verbose=
 nrfutil_boot.program.pattern=echo Please select <J-Link for Bluefruit nRF52> as programmer
+
+#***********************************************
+# blackmagicprobe
+#***********************************************
+blackmagicprobe.name=Black Magic Probe (GDB)
+blackmagicprobe.program.tool=blackmagicprobe
+blackmagicprobe.bootloader.tool=blackmagicprobe
+blackmagicprobe.program.extra_params=;
