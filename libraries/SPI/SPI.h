@@ -137,6 +137,10 @@ void SPIClass::transfer(void *buf, size_t count)
 extern SPIClass SPI;
 #endif
 
+#if SPI_INTERFACES_COUNT > 1
+extern SPIClass SPI1;
+#endif
+
 // For compatibility with sketches designed for AVR @ 64 MHz
 // New programs should use SPI.beginTransaction to set the SPI clock
 #if F_CPU == 64000000 // feather52 run @ 64Mhz
