@@ -58,7 +58,7 @@ extern "C"
 #define LED_STATE_ON         0         // State when LED is lit
 
 // Buttons
-#define PIN_BUTTON           (38)
+#define PIN_BUTTON           (39)
 
 /*
  * Analog pins
