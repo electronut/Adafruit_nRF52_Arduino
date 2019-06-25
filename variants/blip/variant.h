@@ -103,9 +103,9 @@ static const uint8_t AREF = PIN_AREF;
  */
 #define SPI_INTERFACES_COUNT 2
 
-#define PIN_SPI_MISO         (25)
+#define PIN_SPI_MISO         (24)
 #define PIN_SPI_MOSI         (34)
-#define PIN_SPI_SCK          (24)
+#define PIN_SPI_SCK          (25)
 
 #define PIN_SPI1_MISO         (26)
 #define PIN_SPI1_MOSI         (23)
