@@ -36,7 +36,7 @@
 
 // blip does not have qspi flash 
 // TODO create a boards.txt config, something like HAS_QSPI_FLASH=0
-#if defined(NRF52840_XXAA) && !defined(ARDUINO_ELECTRONUTLABS_BLIP)
+#if defined(NRF52840_XXAA) && !defined(ARDUINO_ELECTRONUTLABS_BLIP) && !defined(ARDUINO_ELECTRONUTLABS_PAPYR)
 
 #include <Arduino.h>
 #include <string.h>

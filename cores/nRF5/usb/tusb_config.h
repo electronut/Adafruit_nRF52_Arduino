@@ -88,7 +88,7 @@
 
 // disable msc for feather nrf52840 for now until have a more stable QSPI driver
 // blip doesn't have it
-#if defined(ARDUINO_NRF52840_FEATHER) || defined(ARDUINO_ELECTRONUTLABS_BLIP)
+#if defined(ARDUINO_NRF52840_FEATHER) || defined(ARDUINO_ELECTRONUTLABS_BLIP) || defined(ARDUINO_ELECTRONUTLABS_PAPYR)
 #define CFG_TUD_MSC                 0
 #else
 #define CFG_TUD_MSC                 1
