@@ -60,6 +60,9 @@ extern "C"
 // Buttons
 #define PIN_BUTTON           (39)
 
+// Enable pin reset
+#define RESET_PIN            (18)
+
 /*
  * Analog pins
  */
