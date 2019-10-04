@@ -104,15 +104,25 @@ static const uint8_t AREF = PIN_AREF;
 /*
  * SPI Interfaces
  */
-#define SPI_INTERFACES_COUNT 2
+#define SPI_INTERFACES_COUNT 3
+
+/*
+ SPIM3 is not supported right now
+*/
 
 #define PIN_SPI_MISO         (24)
 #define PIN_SPI_MOSI         (34)
 #define PIN_SPI_SCK          (25)
 
-#define PIN_SPI1_MISO         (26)
-#define PIN_SPI1_MOSI         (23)
-#define PIN_SPI1_SCK          (27)
+// blipboy LCD pinout
+#define PIN_SPI1_MISO         (27)
+#define PIN_SPI1_MOSI         (30)
+#define PIN_SPI1_SCK          (29)
+
+// epaper shield pinout
+#define PIN_SPI2_MISO         (27)
+#define PIN_SPI2_MOSI         (29)
+#define PIN_SPI2_SCK          (31)
 
 static const uint8_t SS   = 17 ; // connected to microSD
 static const uint8_t MOSI = PIN_SPI_MOSI ;
