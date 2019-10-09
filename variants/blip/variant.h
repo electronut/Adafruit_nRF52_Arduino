@@ -60,6 +60,18 @@ extern "C"
 // Buttons
 #define PIN_BUTTON           (39)
 
+// Buttons on blipboy shield
+#define PIN_BUTTON_UP         23
+#define PIN_BUTTON_DOWN       26
+#define PIN_BUTTON_RIGHT      28
+#define PIN_BUTTON_LEFT       21
+#define PIN_BUTTON_CENTER     22
+#define PIN_BUTTON_SELECT     36
+#define PIN_BUTTON_START      37
+#define PIN_BUTTON_A          40
+#define PIN_BUTTON_B          38
+
+
 // Enable pin reset
 #define RESET_PIN            (18)
 
